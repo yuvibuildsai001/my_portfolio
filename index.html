@@ -492,14 +492,22 @@ footer {
 .footer-links a { font-size:13px; color:rgba(255,255,255,.4); transition:color .2s; }
 .footer-links a:hover { color:#fff; }
 .footer-social { display:flex; gap:12px; }
+
+/* ===================== SOCIAL BUTTONS — WORKING LINKS ===================== */
 .soc-btn {
   width:36px; height:36px; border-radius:50%;
   background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.1);
   display:flex; align-items:center; justify-content:center;
   font-size:15px; cursor:pointer; transition:all .2s;
   color: rgba(255,255,255,.5);
+  text-decoration: none;
 }
-.soc-btn:hover { background:var(--accent); border-color:var(--accent); color:#fff; }
+.soc-btn:hover { background:var(--accent); border-color:var(--accent); color:#fff; transform: translateY(-3px); }
+.soc-btn[data-platform="twitter"]:hover  { background: #000; border-color: #000; }
+.soc-btn[data-platform="linkedin"]:hover { background: #0077b5; border-color: #0077b5; }
+.soc-btn[data-platform="instagram"]:hover { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); border-color: #e6683c; }
+.soc-btn[data-platform="youtube"]:hover  { background: #ff0000; border-color: #ff0000; }
+
 .footer-bottom {
   text-align:center; margin-top:32px;
   padding-top:24px; border-top:1px solid rgba(255,255,255,.05);
@@ -963,11 +971,36 @@ footer {
         <li><a href="#portfolio">Awards</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <!-- ✅ SOCIAL BUTTONS — replace the URLs with your actual profile links -->
       <div class="footer-social">
-        <div class="soc-btn">𝕏</div>
-        <div class="soc-btn">in</div>
-        <div class="soc-btn">IG</div>
-        <div class="soc-btn">Yt</div>
+        <a class="soc-btn"
+           data-platform="twitter"
+           href="https://x.com/YuvrajRajput"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Follow on X (Twitter)">𝕏</a>
+
+        <a class="soc-btn"
+           data-platform="linkedin"
+           href="https://www.linkedin.com/in/yuvrajrajput"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Connect on LinkedIn">in</a>
+
+        <a class="soc-btn"
+           data-platform="instagram"
+           href="https://www.instagram.com/yuvrajrajput"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Follow on Instagram">IG</a>
+
+        <a class="soc-btn"
+           data-platform="youtube"
+           href="https://www.youtube.com/@yuvrajrajput"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Subscribe on YouTube">Yt</a>
       </div>
     </div>
     <div class="footer-bottom">
